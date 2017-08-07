@@ -1,3 +1,7 @@
 # jhaller27.github.io
 
-To start, only contains `index.html`.
+Future plans:
+ * Format HTML pages same as markdown pages
+ * Resume
+ * Add some projects
+   * Embed if possible
