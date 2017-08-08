@@ -11,8 +11,8 @@ Below I've outlined some basic information regarding 2 such options. If there ar
 I'd be delighted to know people's thoughts & opinions as soon as possible, but I intend to bring it up during next session regardless.
 
 # Options chart
-| Options | [D&D Beyond](https://www.dndbeyond.com/pricing-details) | [Roll20](https://app.roll20.net/account/supporter) | Nothing\* |
-|---|---|---|---|
+| Options | [D&D Beyond](https://www.dndbeyond.com/pricing-details) | [Roll20](https://app.roll20.net/account/supporter) | Nothing |
+|:---|:---|:---|:---|
 | **Price** | ~$25/book, ~$2/item (deducted from book price) | $10/month (or $100/year) | *Free* |
 | **Content** | *All* official and some homebrew content | Monsters, tokens, line-of-sight, dynamic lighting | - |
 | **Character Sheets** | Fully-integrated character sheets + character builder | *Rollable* stats | - |
@@ -20,6 +20,4 @@ I'd be delighted to know people's thoughts & opinions as soon as possible, but I
 | **General Pros** | Looks good (on all devices), *all* content linked, can test for free | API access (better macros) | - |
 | **General Cons** | No integration (rollable stats etc.), more browser tabs | Doesn't have all content (e.g. spells are missing) | - |
 
-_* May include Tabletop Simulator_
-
-_** All options can be shared with members in campaign_
+_Note: Tabletop Simulator is also an option_
