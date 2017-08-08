@@ -23,6 +23,18 @@ title: Password Generator (Extra Strong version)
 				margin-right: 10px;
 				display: block;
 			}
+			.container{
+				display:flex;
+				justify-content:space-evenly;
+				align-content:center;
+				flex-flow:row wrap;
+			}
+			.container:first-child {
+				flex-grow:1;
+			}
+			.container:last-child {
+				flex-grow:2;
+			}
 		</style>
 
         <script src="sites.js"></script>
@@ -324,8 +336,10 @@ title: Password Generator (Extra Strong version)
 				<script type="text/javascript">
 					for (var i = 0; i < sites.length; i++) {
 					  document.write("<label class=\"site\"><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
-					  document.writeln(" <input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
-					  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
+					  document.writeln("<div class=\"container\">");
+						  document.writeln("<input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
+						  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
+					  document.writeln("</div class=\"container\">");
 					}
 				</script>
 			</form>
@@ -334,8 +348,10 @@ title: Password Generator (Extra Strong version)
 			<form method="post" name="ot" class="callout" id="ot" autocapitalize="none" onsubmit="setvals();otpassword.value = b64_sha256(customRoot.value+&#39;:&#39;+ CustomSite.value).substr(0,20); if(customRoot.value.length==0 || customRoot.value==null){otpassword.value = &#39;&#39;}; document.ot.otpassword.focus(); document.ot.otpassword.select(); return false;">
 				<input name="passwd" id="customRoot" type="hidden" value="">
 				<label class="site">Custom: </label>
-				<input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
-				<input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
+				<div class="container">
+					<input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
+					<input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
+				</div>
 				&nbsp;&nbsp;
 				<input type="submit" class="genbtn" value="Generate" tabindex="4">
 				<input type="button" class="genbtn" value="Clear All" onclick="window.location.href=window.location.href">
