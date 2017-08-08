@@ -356,7 +356,7 @@ subtitle: (Extra Strong version)
 			<!--custom-->
 			<form method="post" name="ot" class="callout" id="ot" autocapitalize="none" onsubmit="setvals();otpassword.value = b64_sha256(customRoot.value+&#39;:&#39;+ CustomSite.value).substr(0,20); if(customRoot.value.length==0 || customRoot.value==null){otpassword.value = &#39;&#39;}; document.ot.otpassword.focus(); document.ot.otpassword.select(); return false;">
 				<input name="passwd" id="customRoot" type="hidden" value="">
-				<label class="site">Custom: </label>
+				<label class="site">Custom</label>
 				<div class="container">
 					<input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
 					<input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
