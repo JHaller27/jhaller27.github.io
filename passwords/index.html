@@ -31,10 +31,10 @@ subtitle: (Extra Strong version)
 				flex-flow:row wrap;
 			}
 			.container:first-child {
-				flex-grow:1;
+				flex:1 1 auto;
 			}
 			.container:last-child {
-				flex-grow:2;
+				flex:2 2 auto;
 			}
 		</style>
 
@@ -308,7 +308,7 @@ subtitle: (Extra Strong version)
 			  <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
 
 			  <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-			  <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+			  {% if page.title %}<h2 id="project_tagline">{{ page.subtitle }}</h2>{% endif %}
 
 			  {% if site.show_downloads %}
 				<section id="downloads">
