@@ -15,6 +15,16 @@ title: Password Generator (Extra Strong version)
 
 		<title>{{ site.title | default: site.github.repository_name }}</title>
 
+		<style>
+			label.site {
+				width: 100px;
+				float: left;
+				text-align: right;
+				margin-right: 10px;
+				display: block;
+			}
+		</style>
+
         <script src="sites.js"></script>
         <script type="text/javascript">
             /*
@@ -313,7 +323,7 @@ title: Password Generator (Extra Strong version)
 			<form method="post">
 				<script type="text/javascript">
 					for (var i = 0; i < sites.length; i++) {
-					  document.write("<label><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
+					  document.write("<label class=\"site\"><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
 					  document.writeln(" <input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
 					  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
 					}
@@ -323,7 +333,7 @@ title: Password Generator (Extra Strong version)
 			<!--custom-->
 			<form method="post" name="ot" class="callout" id="ot" autocapitalize="none" onsubmit="setvals();otpassword.value = b64_sha256(customRoot.value+&#39;:&#39;+ CustomSite.value).substr(0,20); if(customRoot.value.length==0 || customRoot.value==null){otpassword.value = &#39;&#39;}; document.ot.otpassword.focus(); document.ot.otpassword.select(); return false;">
 				<input name="passwd" id="customRoot" type="hidden" value="">
-				<label>Custom: </label>
+				<label class="site">Custom: </label>
 				<input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
 				<input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
 				&nbsp;&nbsp;
