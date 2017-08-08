@@ -324,12 +324,18 @@ title: Password Generator (Extra Strong version)
 			<h1>{{ page.title }}</h1>
 			<form name="m" id="m">
 				<div id="mp">
-					<p>Master password<br>
-						<input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
-						<input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
-						<input value="Generate" class="genbtn" onclick="setvals();" type="button">
-						<input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show"> <label id="showlbl" for="show">show password</label>
-					</p>
+					<label>Master password</label>
+						<div class="container">
+							<div>
+								<input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
+								<input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
+								<input value="Generate" class="genbtn" onclick="setvals();" type="button">
+							</div>
+							<div>
+								<input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show">
+								<label id="showlbl" for="show">show password</label>
+							</div>
+						</div>
 				</div>
 			</form>
 			<form method="post">
