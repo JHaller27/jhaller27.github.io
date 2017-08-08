@@ -11,7 +11,7 @@ Below I've outlined some basic information regarding 2 such options. If there ar
 I'd be delighted to know people's thoughts & opinions as soon as possible, but I intend to bring it up during next session regardless.
 
 # Options chart
-| Options | [D&D Beyond](https://www.dndbeyond.com/pricing-details) | [Roll20](https://app.roll20.net/account/supporter) | Nothing* |
+| Options | [D&D Beyond](https://www.dndbeyond.com/pricing-details) | [Roll20](https://app.roll20.net/account/supporter) | Nothing\* |
 |---|---|---|---|
 | **Price** | ~$25/book, ~$2/item (deducted from book price) | $10/month (or $100/year) | *Free* |
 | **Content** | *All* official and some homebrew content | Monsters, tokens, line-of-sight, dynamic lighting | - |
