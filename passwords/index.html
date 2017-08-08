@@ -1,38 +1,20 @@
+---
+title: Password Generator (Extra Strong version)
+---
+
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>Password Generator (Extra Strong version) | SS64.com</title>
-        <meta name="Author" content="Simon Sheppard">
-        <meta name="Description" content="A free tool that creates highly secure passwords that are difficult to crack or guess. Uses a standard SHA-256 cryptographic hash function.">
-        <meta name="Keywords" content="password, passwords, generator, SHA-256">
-        <!-- Aug 2016 Turned off Autocapitalise for iOS -->
-        <style type="text/css">
-            p, h1, li, label, .masterbox {font-family: Helvetica, Arial, Verdana, Geneva, sans-serif; font-weight: normal; font-size: 100%;}
-            h1{clear: both; font-size :140%;}
-            body{font-weight: normal; color: #000; background-color: #ccc; margin: 20px 30px 20px 20px;}
-            form{left: 40px;margin: 0;}
-            label{width: 100px;
-            float: left;
-            text-align: right;
-            margin-right: 10px;
-            margin-top: 2px;
-            display: block;}
-            li{margin: 15px 0;}
-            #mp {margin-left: 110px;}
-            .masterbox {width: 285px; font-family: Verdana, Geneva, Helvetica, Sans-Serif; }
-            .sitebox {width: 90px; margin-bottom: 0.5px;}
-            .pass, .spell{position: relative; left: 15px; width: 170px; margin-bottom: 1.5px; font-family: Menlo, "Bitstream Vera Sans", "Courier New", courier, monospace;}
-            .spell{font-size: 22px; background-color: #ccc; border: none; margin-left: 90px; width: 350px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select:none; font-family: "courier new", courier, monospace;}
-            .tagline {font-size: 12px;}
-            .genbtn {font-size: 16px; margin-left: 10px; width: 120px;}
-            #showlbl{clear:both;text-align: left;float:none;width: 200px; display:inline;}
-            a:link{color: #00F; text-decoration: none;}
-            a:visited{color: #00F; text-decoration: none;}
-            a:visited:hover{color: #00F; text-decoration: underline;}
-            a:hover{color: #00F; text-decoration: underline;}
-            a:active{color: #00F;}
-        </style>
+	<html lang="{{ site.lang | default: "en-US" }}">
+
+	  <head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width,maximum-scale=2">
+		<meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+		<title>{{ site.title | default: site.github.repository_name }}</title>
+
         <script src="sites.js"></script>
         <script type="text/javascript">
             /*
@@ -294,59 +276,104 @@
             // ]]>
         </script>
     </head>
+
     <body onload="document.m.reset();document.ot.reset();document.m.main.focus();">
-        <h1>SS64 Password Generator (Extra Strong version)</h1>
-        <form name="m" id="m">
-            <div id="mp">
-                <p>Master password<br>
-                    <input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
-                    <input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
-                    <input value="Generate" class="genbtn" onclick="setvals();" type="button">
-                    <input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show"> <label id="showlbl" for="show">show password</label>
-                </p>
-            </div>
-        </form>
-        <form method="post">
-            <script type="text/javascript">
-                for (var i = 0; i < sites.length; i++) {
-                  document.write("<label><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
-                  document.writeln(" <input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
-                  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
-                }
-            </script>
-        </form>
-        <br>
-        <!--custom-->
-        <form method="post" name="ot" class="callout" id="ot" autocapitalize="none" onsubmit="setvals();otpassword.value = b64_sha256(customRoot.value+&#39;:&#39;+ CustomSite.value).substr(0,20); if(customRoot.value.length==0 || customRoot.value==null){otpassword.value = &#39;&#39;}; document.ot.otpassword.focus(); document.ot.otpassword.select(); return false;">
-            <input name="passwd" id="customRoot" type="hidden" value="">
-            <label>Custom: </label> 
-            <input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
-            <input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
-            &nbsp;&nbsp;
-            <input type="submit" class="genbtn" value="Generate" tabindex="4">
-            <input type="button" class="genbtn" value="Clear All" onclick="window.location.href=window.location.href">
-        </form>
-        <br>
-        <input name="read1" id="spell" class="spell" readonly="" tabindex="30" value="">
-        <a id="help"></a>
-        <h1>Explanation</h1>
-        <p>Using the same password for multiple email, shopping and social networking websites is risky, it means that a <a href="http://www.privacyrights.org/data-breach">security breach</a> at  one website will compromise <a href="http://www.readwriteweb.com/archives/monstercom_loses_user_data_aga.php">all</a> your accounts, possibly even leading to <a href="http://en.wikipedia.org/wiki/Identity_theft">identity theft</a>.</p>
-        <p>So,  the idea is that you memorise just one, reasonably long, <a href="http://howsecureismypassword.net/">secure</a> master password and use that to  generate a set of  non-dictionary passwords. Copy and paste the new password(s) into the website and set your web browser to remember them.</p>
-        <p>All the websites get different passwords, but you only have to remember one!</p>
-        <p>Using a different PC? you can re-generate the same set of passwords at any time by returning to this page and entering the same master password. </p>
-        <ul>
-            <li>This is the <a href="http://ss64.com/docs/security.html">extra</a>-strong 20 character version of the standard <a href="http://ss64.com/pass/pass.html">SS64 password generator</a>.</li>
-            <li>Not all websites will accept 20 character passwords yet, but support is improving all the time.</li>
-            <li>For any website that's not on the list, just type the name into the 'Custom' box (the last one in the list) and press Generate. </li>
-            <li>Using UPPER or lower case will produce different passwords, when using this for the first time it’s a good idea to use the 'Show Password' tickbox to check for any typos.</li>
-            <li>Most websites  will send a password reset via email, so set the password for that email account to something completely different, just in case you ever forget the master password!</li>
-            <li>To navigate this page using the keyboard, use the TAB and RETURN keys.</li>
-        </ul>
-        <p>This password generator works using Javascript, entirely within the page, no data is ever passed back to my server. Notwithstanding this, it is a very good idea to save your own copy of this page. Keeping your own copy ensures that the password generator will still be available to you even if this website goes off-line. You can also <i>View-Source</i> and see exactly how the javascript works, copy it to a USB stick, email it to yourself, even upload it to your own website (it’s open source.) There are no dependent files, just save as a single HTML file.</p>
-        <p><a href="http://ss64.com/pass/command-line.html">Command-line version</a></p>
-        <p>Credits</p>
-        <p class="tagline">JavaScript implementation of the Secure <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">Hash Algorithm</a>, (SHA-256, ©Paul Johnston, distributed under the <a href="http://en.wikipedia.org/wiki/BSD_License">BSD License</a>.) Inspired by <a href="http://angel.net/~nic/passwd.sha1.1a.html">Nic Wolff’s password generator</a> Mobile version by <a href="http://jayvanhutten.com/pass/">Jay van hutten</a> </p>
-        <p class="tagline"><a href="http://ss64.com/">Simon Sheppard</a>, Aug 2016</p>
-        <p class="tagline">SS64.com/pass/ </p>
+
+		<!-- HEADER -->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+			  <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+
+			  <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+			  <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+
+			  {% if site.show_downloads %}
+				<section id="downloads">
+				  <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
+				  <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
+				</section>
+			  {% endif %}
+			</header>
+		</div>
+
+        <!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+		  <section id="main_content" class="inner">
+			<h1>{{ page.title }}</h1>
+			<form name="m" id="m">
+				<div id="mp">
+					<p>Master password<br>
+						<input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
+						<input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
+						<input value="Generate" class="genbtn" onclick="setvals();" type="button">
+						<input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show"> <label id="showlbl" for="show">show password</label>
+					</p>
+				</div>
+			</form>
+			<form method="post">
+				<script type="text/javascript">
+					for (var i = 0; i < sites.length; i++) {
+					  document.write("<label><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
+					  document.writeln(" <input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
+					  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
+					}
+				</script>
+			</form>
+			<br>
+			<!--custom-->
+			<form method="post" name="ot" class="callout" id="ot" autocapitalize="none" onsubmit="setvals();otpassword.value = b64_sha256(customRoot.value+&#39;:&#39;+ CustomSite.value).substr(0,20); if(customRoot.value.length==0 || customRoot.value==null){otpassword.value = &#39;&#39;}; document.ot.otpassword.focus(); document.ot.otpassword.select(); return false;">
+				<input name="passwd" id="customRoot" type="hidden" value="">
+				<label>Custom: </label>
+				<input name="CustomSite" class="sitebox" autocapitalize="none" onkeyup="otpassword.value = &#39;&#39;;" tabindex="3">
+				<input name="otpassword" id="otpass" class="pass" readonly="" onclick="highlight(this);" tabindex="5">
+				&nbsp;&nbsp;
+				<input type="submit" class="genbtn" value="Generate" tabindex="4">
+				<input type="button" class="genbtn" value="Clear All" onclick="window.location.href=window.location.href">
+			</form>
+			<br>
+			<input name="read1" id="spell" class="spell" readonly="" tabindex="30" value="">
+			<a id="help"></a>
+			<h2>Explanation</h2>
+			<p>Using the same password for multiple email, shopping and social networking websites is risky, it means that a <a href="http://www.privacyrights.org/data-breach">security breach</a> at  one website will compromise <a href="http://www.readwriteweb.com/archives/monstercom_loses_user_data_aga.php">all</a> your accounts, possibly even leading to <a href="http://en.wikipedia.org/wiki/Identity_theft">identity theft</a>.</p>
+			<p>So,  the idea is that you memorise just one, reasonably long, <a href="http://howsecureismypassword.net/">secure</a> master password and use that to  generate a set of  non-dictionary passwords. Copy and paste the new password(s) into the website and set your web browser to remember them.</p>
+			<p>All the websites get different passwords, but you only have to remember one!</p>
+			<p>Using a different PC? you can re-generate the same set of passwords at any time by returning to this page and entering the same master password. </p>
+			<ul>
+				<li>This is the <a href="http://ss64.com/docs/security.html">extra</a>-strong 20 character version of the standard <a href="http://ss64.com/pass/pass.html">SS64 password generator</a>.</li>
+				<li>Not all websites will accept 20 character passwords yet, but support is improving all the time.</li>
+				<li>For any website that's not on the list, just type the name into the 'Custom' box (the last one in the list) and press Generate. </li>
+				<li>Using UPPER or lower case will produce different passwords, when using this for the first time it’s a good idea to use the 'Show Password' tickbox to check for any typos.</li>
+				<li>Most websites  will send a password reset via email, so set the password for that email account to something completely different, just in case you ever forget the master password!</li>
+				<li>To navigate this page using the keyboard, use the TAB and RETURN keys.</li>
+			</ul>
+			<p>This password generator works using Javascript, entirely within the page, no data is ever passed back to my server. Notwithstanding this, it is a very good idea to save your own copy of this page. Keeping your own copy ensures that the password generator will still be available to you even if this website goes off-line. You can also <i>View-Source</i> and see exactly how the javascript works, copy it to a USB stick, email it to yourself, even upload it to your own website (it’s open source.) There are no dependent files, just save as a single HTML file.</p>
+			<p><a href="http://ss64.com/pass/command-line.html">Command-line version</a></p>
+			<p>Credits</p>
+			<p class="tagline">JavaScript implementation of the Secure <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">Hash Algorithm</a>, (SHA-256, ©Paul Johnston, distributed under the <a href="http://en.wikipedia.org/wiki/BSD_License">BSD License</a>.) Inspired by <a href="http://angel.net/~nic/passwd.sha1.1a.html">Nic Wolff’s password generator</a> Mobile version by <a href="http://jayvanhutten.com/pass/">Jay van hutten</a> </p>
+			<p class="tagline"><a href="http://ss64.com/">Simon Sheppard</a>, Aug 2016</p>
+			<p class="tagline">SS64.com/pass/ </p>
+		  </section>
+		</div>
+
+		<!-- FOOTER  -->
+		<div id="footer_wrap" class="outer">
+		  <footer class="inner">
+			{% if site.github.is_project_page %}
+			<p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+			{% endif %}
+			<p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+		  </footer>
+		</div>
+
+		{% if site.google_analytics %}
+		  <script type="text/javascript">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', '{{ site.google_analytics }}', 'auto');
+			ga('send', 'pageview');
+		  </script>
+		{% endif %}
     </body>
 </html>
