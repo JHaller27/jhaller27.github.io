@@ -254,7 +254,7 @@ subtitle: (Extra Strong version)
               var mypass = document.getElementById("main");
             
               document.getElementById("customRoot").setAttribute('value', mypass.value);
-              document.getElementById('spell').setAttribute('value', '' );
+              document.getElementById('spell').innerHTML='';
             
             /*     	   Seed    masterpassword */
             
@@ -268,7 +268,7 @@ subtitle: (Extra Strong version)
                field.select();
                var spell = field.value;
                spell = spell.substr(0,5) + " " + spell.substr(5,5) + " " + spell.substr(10,5) + " " + spell.substr(15,5)
-               document.getElementById('spell').setAttribute('value', spell );
+               document.getElementById('spell').innerHTML=spell;
             }
             
             function passwordHash(passbox,master) {
@@ -362,9 +362,7 @@ subtitle: (Extra Strong version)
 				<input type="submit" class="genbtn" value="Generate" tabindex="4">
 				<input type="button" class="genbtn" value="Clear All" onclick="window.location.href=window.location.href">
 			</form>
-			<br>
-			<input name="read1" id="spell" class="spell" readonly="" tabindex="30" value="">
-			<a id="help"></a>
+			<h4 id="spell"></h4>
 			<h2>Explanation</h2>
 			<p>Using the same password for multiple email, shopping and social networking websites is risky, it means that a <a href="http://www.privacyrights.org/data-breach">security breach</a> at  one website will compromise <a href="http://www.readwriteweb.com/archives/monstercom_loses_user_data_aga.php">all</a> your accounts, possibly even leading to <a href="http://en.wikipedia.org/wiki/Identity_theft">identity theft</a>.</p>
 			<p>So,  the idea is that you memorise just one, reasonably long, <a href="http://howsecureismypassword.net/">secure</a> master password and use that to  generate a set of  non-dictionary passwords. Copy and paste the new password(s) into the website and set your web browser to remember them.</p>
