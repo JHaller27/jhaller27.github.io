@@ -14,7 +14,7 @@ subtitle: (Extra Strong version)
 
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-		<title>{{ site.title | default: site.github.repository_name }}</title>
+		<title>{% if page.title %} {{ page.title }}&nbsp;-&nbsp; {% endif %}{{ site.title | default: site.github.repository_name }}</title>
 
 		<style>
 			label.site {
