@@ -1,5 +1,6 @@
 ---
-title: Password Generator (Extra Strong version)
+title: Password Generator
+subtitle: (Extra Strong version)
 ---
 
 <!DOCTYPE html>
@@ -322,6 +323,9 @@ title: Password Generator (Extra Strong version)
 		<div id="main_content_wrap" class="outer">
 		  <section id="main_content" class="inner">
 			<h1>{{ page.title }}</h1>
+			{% if page.subtitle %}
+				<h2>{{ page.subtitle }}</h2>
+			{% endif %}
 			<form name="m" id="m">
 				<div id="mp">
 					<label>Master password</label>
