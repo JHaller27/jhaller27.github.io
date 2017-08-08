@@ -3,4 +3,5 @@ var sites = [
   ,{seed:"facebook", url:"https://www.facebook.com/", displayName:"Facebook"}
   ,{seed:"google", url:"https://www.google.com/", displayName:"Google"}
   ,{seed:"linkedin", url:"https://www.linkedin.com/", displayName:"LinkedIn"}
+  ,{seed:"steam", url:"https://www.steampowered.com/", displayName:"Steam"}
 ];
