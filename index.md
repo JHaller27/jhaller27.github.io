@@ -1,3 +1,5 @@
-# James Haller
+---
+title: Homepage
+---
 
 [Password Generator](passwords)
