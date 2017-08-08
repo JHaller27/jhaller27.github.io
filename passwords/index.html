@@ -22,10 +22,10 @@ subtitle: (Extra Strong version)
 				align-content:center;
 				flex-flow:row wrap;
 			}
-			.container > :first-child {
+			.container > .sitebox {
 				flex:1;
 			}
-			.container > :nth-child(2) {
+			.container > .pass {
 				flex:2;
 			}
 			#spell {
@@ -304,28 +304,28 @@ subtitle: (Extra Strong version)
 		  <section id="main_content" class="inner">
 			<form name="m" id="m">
 				<div id="mp">
-					<label>Master password</label>
-						<div class="container">
-							<div>
-								<input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
-								<input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
-								<input value="Generate" class="genbtn" onclick="setvals();" type="button">
-							</div>
-							<div>
-								<input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show">
-								<label id="showlbl" for="show">show password</label>
-							</div>
+					<div class="container">
+						<label>Master password</label>
+						<div>
+							<input name="main" id="main" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;maintext&#39;);" type="password" tabindex="1">
+							<input name="maintext" id="maintext" class="masterbox" value="" autocomplete="off" autocapitalize="none" onblur="setvals();" onkeyup="copyTo(this, &#39;main&#39;);" style="display: none;" tabindex="2">
+							<input value="Generate" class="genbtn" onclick="setvals();" type="button">
 						</div>
+						<div>
+							<input name="reveal" onclick="revealPassword(this.checked);" type="checkbox" id="show">
+							<label id="showlbl" for="show">show password</label>
+						</div>
+					</div>
 				</div>
 			</form>
 			<form method="post">
 				<script type="text/javascript">
 					for (var i = 0; i < sites.length; i++) {
-					  document.write("<label class=\"site\"><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
-					  document.writeln("<div class=\"container\">");
-						  document.writeln("<input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
-						  document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
-					  document.writeln("</div class=\"container\">");
+						document.write("<div class=\"container\">");
+							document.writeln("<label class=\"site\"><a href=\"" + sites[i].url + "\">" + sites[i].displayName + "</a></label>");
+							document.writeln("<input name=\"site\" class=\"sitebox\" value=\"" + sites[i].seed + "\" readonly=\"\">");
+							document.writeln("<input name=\"password\" id=\"" + sites[i].seed + "\" class=\"pass\" readonly=\"\" onclick=\"highlight(this);\" tabindex=\"6\" value=\"\"><br>");
+						document.writeln("</div>");
 					}
 				</script>
 			</form>
