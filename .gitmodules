@@ -1,0 +1,3 @@
+[submodule "rpgcal"]
+	path = rpgcal
+	url = https://github.com/JHaller27/rpgcal.git
