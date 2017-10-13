@@ -12,5 +12,7 @@ title: Homepage
 
 # Other links
 
+[PC Build](pcpp)
+
 [Password Generator](passwords)
 
