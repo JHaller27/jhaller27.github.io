@@ -6,10 +6,6 @@ title: Homepage
 
 [RPG Calendar](rpgcal)
 
-# Professional
-
-[Resume](resume)
-
 # Other links
 
 [PC Build](pcpp)
