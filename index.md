@@ -4,11 +4,17 @@ title: Homepage
 
 # Projects
 
-[RPG Calendar](rpgcal)
+[Git Config](git-config)
 
-# Other links
+[PyState](PyState)
 
-[PC Build](pcpp)
+[Tavern Name Generator](TavernNameGen)
 
-[Password Generator](passwords)
+[Expression Interpreter](ExpressionInterpreter)
 
+[PyTemplate](PyTemplate)
+
+[Tower of Hanoi](TowerOfHanoi-Python)
+
+
+_Ask me about my school projects!_
