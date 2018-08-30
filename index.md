@@ -4,7 +4,7 @@ title: Homepage
 
 # Projects
 
-[PyState](https://github.com/JHaller27/PyState)
+[PyState](PyState)
 _Python library for modular state-based behavior._
 
 [PyTemplate](https://github.com/JHaller27/PyTemplate)
