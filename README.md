@@ -2,5 +2,3 @@
 
 Future plans:
  * Resume
- * Add some projects
-   * Embed if possible
