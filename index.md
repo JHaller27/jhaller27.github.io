@@ -10,7 +10,7 @@ _Python library for modular state-based behavior._
 [PyTemplate](PyTemplate)
 _Python tool to generate files based on template/definition files._
 
-[Tavern Name Generator](https://github.com/JHaller27/TavernNameGen)
+[Tavern Name Generator](TavernNameGen)
 _Generate a random RPG tavern name!_
 
 [Expression Interpreter](https://github.com/JHaller27/ExpressionInterpreter)
