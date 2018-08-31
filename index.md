@@ -7,7 +7,7 @@ title: Homepage
 [PyState](PyState)
 _Python library for modular state-based behavior._
 
-[PyTemplate](https://github.com/JHaller27/PyTemplate)
+[PyTemplate](PyTemplate)
 _Python tool to generate files based on template/definition files._
 
 [Tavern Name Generator](https://github.com/JHaller27/TavernNameGen)
