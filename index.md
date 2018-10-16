@@ -10,6 +10,9 @@ _Python library for modular state-based behavior._
 [PyTemplate](PyTemplate)
 _Python tool to generate files based on template/definition files._
 
+[DES Sim](des-sim)
+_Encrypt a message using DES encryption._
+
 [Tavern Name Generator](TavernNameGen/index.html)
 _Generate a random RPG tavern name!_
 
