@@ -4,6 +4,9 @@ title: Homepage
 
 # Projects
 
+[CheatSheeter](cheatsheeter)
+_WIP: Markdown cheat-sheet maker._
+
 [PyState](PyState)
 _Python library for modular state-based behavior._
 
