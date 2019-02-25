@@ -7,6 +7,9 @@ title: Homepage
 [CheatSheeter](cheatsheeter)
 _WIP: Markdown cheat-sheet maker._
 
+[Chooser](Chooser)
+_Given a list of items, select one at random._
+
 [PyState](PyState)
 _Python library for modular state-based behavior._
 
