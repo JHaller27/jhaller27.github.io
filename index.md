@@ -4,6 +4,27 @@ title: Homepage
 
 # Projects
 
+[Python Summer Class](PythonSummerClass)
+_WIP: Some practice coding projects for beginner programmers._
+
+[Project Euler Solutions](ProjectEuler)
+_My solutions to problems from [ProjectEuler.net](https://projecteuler.net/archives)._
+
+[mkmonster](mkmonster)
+_Create an Angry GM's monster stat block via CLI._  
+
+[Star Trader](star_trader)
+_TypeScript project to find the most profitable trade routes in CIG's Star Citizen._
+
+[Markdown to BBCode](md2bb)
+_WIP: Python script to convert markdown to WABBC (WorldAnvil BB Code)._
+
+[simple-nixns](simple-nixns)
+_Simple Linux network containers via bash script._
+
+[pydice](pydice)
+_Python script to roll dice._
+
 [CheatSheeter](cheatsheeter)
 _WIP: Markdown cheat-sheet maker._
 
@@ -30,6 +51,9 @@ _Solves Tower of Hanoi problems._
 
 [Git Aliases](https://github.com/JHaller27/git-config)
 _Personal git alias list._
+
+[GrayCodeGenerator](GrayCodeGenerator)
+_Python script to generate a sequence of gray code (of any base and length)._
 
 
 _Ask me about my school projects!_
