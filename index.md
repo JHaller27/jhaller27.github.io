@@ -4,8 +4,8 @@ title: Homepage
 
 # Projects
 
-[Python Summer Class](PythonSummerClass)
-_WIP: Some practice coding projects for beginner programmers._
+[JSON Query Language](JQL)
+_Program + spec for querying for a list of JSON files whose data match user-defined criteria._
 
 [Project Euler Solutions](https://github.com/JHaller27/ProjectEuler)
 _My solutions to problems from [ProjectEuler.net](https://projecteuler.net/archives)._
