@@ -1,0 +1,72 @@
+html {
+	--color-bg-primary: #222;
+	--color-fg-primary: white;
+
+	--color-bg-accent-primary: #00f;
+	--color-bg-accent-secondary: #00a;
+	--color-fg-accent-primary: white;
+
+	--font-size-1: 42px;
+	--font-size-2: 36px;
+	--font-size-3: 24px;
+
+	font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+	margin-block: 0.75em;
+}
+
+h1 {
+	font-size: var(--font-size-1);
+}
+
+h2 {
+	font-size: var(--font-size-2);
+}
+
+h3 {
+	font-size: var(--font-size-3);
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background-color: var(--color-bg-primary);
+	color: var(--color-fg-primary);
+
+	position: sticky;
+	top: 0;
+}
+
+a.link-button {
+	display: inline-block;
+	padding: 1rem;
+	border-radius: 5px;
+	background-color: var(--color-bg-accent-primary);
+	color: var(--color-fg-accent-primary);
+	font-weight: bold;
+	text-decoration: none;
+
+	border: 2px solid transparent;
+}
+
+a.link-button:hover {
+	background-color: var(--color-bg-accent-secondary);
+	border: 2px solid var(--color-fg-accent-primary);
+}
+
+.outer {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.inner {
+	max-width: 640px;
+	margin-inline: auto;
+	padding-block: 2rem;
+	padding-inline: 0.5rem;
+}
