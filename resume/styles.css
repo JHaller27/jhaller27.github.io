@@ -1,0 +1,26 @@
+main {
+	& h1 {
+		font-size: var(--font-size-2);
+	}
+
+	& h2 {
+		font-size: var(--font-size-3);
+	}
+
+	& .big-item--header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+
+		padding-inline: 1rem;
+		border-radius: 4px;
+		margin-block: 1rem;
+
+		background-color: var(--color-2-bg);
+		color: var(--color-2-fg);
+	}
+
+	& .big-item--header > * {
+		margin-block: auto;
+	}
+}

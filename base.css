@@ -1,6 +1,9 @@
 html {
-	--color-bg-primary: #222;
-	--color-fg-primary: white;
+	--color-1-bg: white;
+	--color-1-fg: black;
+
+	--color-2-bg: #222;
+	--color-2-fg: white;
 
 	--color-bg-accent-primary: #00f;
 	--color-bg-accent-secondary: #00a;
@@ -31,11 +34,14 @@ h3 {
 
 body {
 	margin: 0;
+
+	background-color: var(--color-1-bg);
+	color: var(--color-1-fg);
 }
 
 header {
-	background-color: var(--color-bg-primary);
-	color: var(--color-fg-primary);
+	background-color: var(--color-2-bg);
+	color: var(--color-2-fg);
 
 	position: sticky;
 	top: 0;
@@ -57,6 +63,12 @@ a.link-button:hover {
 	background-color: var(--color-bg-accent-secondary);
 	border: 2px solid var(--color-fg-accent-primary);
 }
+
+ul.simple {
+	list-style-type: none;
+	padding: 0;
+}
+
 
 .outer {
 	width: 100%;
