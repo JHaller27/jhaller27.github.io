@@ -1,6 +1,7 @@
 html {
 	--color-1-bg: white;
 	--color-1-fg: black;
+	--color-1-fg-subtle: #555;
 
 	--color-2-bg: #222;
 	--color-2-fg: white;
@@ -72,6 +73,7 @@ ul.simple {
 ul.sushi-tags {
 	list-style-type: none;
 	padding: 0;
+
 	display: flex;
 	flex-flow: row wrap;
 	gap: 0.25em;
@@ -84,10 +86,11 @@ ul.sushi-tags {
 }
 
 ul.sushi-cards {
-	display: grid;
-	grid-auto-flow: column;
 	list-style-type: none;
 	padding: 0;
+
+	display: grid;
+	grid-auto-flow: column;
 	gap: 0.25em;
 
 	& li {
