@@ -45,10 +45,4 @@ main {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 	}
-
-	section#honors span.org {
-		display: block;
-		color: var(--color-1-fg-subtle);
-		font-style: italic;
-	}
 }

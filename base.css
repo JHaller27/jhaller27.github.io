@@ -70,7 +70,7 @@ ul.simple {
 	padding: 0;
 }
 
-ul.sushi-tags {
+ul.sushi-tags, ul.sushi-pills {
 	list-style-type: none;
 	padding: 0;
 
@@ -82,6 +82,30 @@ ul.sushi-tags {
 		border: 2px solid var(--color-1-fg);
 		border-radius: 0.5em;
 		padding: 0.5em;
+	}
+}
+
+ul.sushi-tags.invert li {
+	background-color: var(--color-1-fg);
+	color: var(--color-1-bg);
+}
+
+ul.sushi-pills li {
+	padding: 0;
+
+	background-color: var(--color-1-fg);
+	color: var(--color-1-bg);
+
+	& span {
+		display: inline-block;
+		padding: 0.5em;
+	}
+
+	& span.highlight {
+		background-color: var(--color-1-bg);
+		color: var(--color-1-fg);
+		border-radius: 0.5em;
+		margin-inline: 0.125em;
 	}
 }
 
