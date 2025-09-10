@@ -46,6 +46,19 @@ header {
 	color: var(--color-2-fg);
 }
 
+.outer {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.inner {
+	max-width: 640px;
+	margin-inline: auto;
+	padding-block: 2rem;
+	padding-inline: 0.5rem;
+}
+
 a.link-button {
 	display: inline-block;
 	padding: 1rem;
@@ -136,17 +149,4 @@ ul.sushi-cards {
 ul.sushi-tags.invert li {
 	background-color: var(--color-1-fg);
 	color: var(--color-1-bg);
-}
-
-.outer {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.inner {
-	max-width: 640px;
-	margin-inline: auto;
-	padding-block: 2rem;
-	padding-inline: 0.5rem;
 }
