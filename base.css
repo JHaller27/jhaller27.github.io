@@ -95,11 +95,6 @@ ul.sushi-tags, ul.sushi-pills {
 	}
 }
 
-ul.sushi-tags.invert li {
-	background-color: var(--color-1-fg);
-	color: var(--color-1-bg);
-}
-
 ul.sushi-pills li {
 	padding: 0;
 
@@ -131,7 +126,16 @@ ul.sushi-cards {
 		border: 2px solid var(--color-1-fg);
 		border-radius: 0.5em;
 		padding: 0.5em;
+
+		& h1, h2, h3 {
+			margin: 0;
+		}
 	}
+}
+
+ul.sushi-tags.invert li {
+	background-color: var(--color-1-fg);
+	color: var(--color-1-bg);
 }
 
 .outer {
