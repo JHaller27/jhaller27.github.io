@@ -17,7 +17,6 @@ main {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 
-		padding-inline: 1rem;
 		border-radius: 4px;
 		margin-block: 1rem;
 
@@ -34,6 +33,10 @@ main {
 		& > * > * {
 			margin: 0;
 		}
+	}
+
+	.big-item--header, .impact-description {
+		padding-inline: 1em;
 	}
 
 	& section#academics ul {
