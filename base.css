@@ -44,9 +44,6 @@ body {
 header {
 	background-color: var(--color-2-bg);
 	color: var(--color-2-fg);
-
-	position: sticky;
-	top: 0;
 }
 
 a.link-button {
