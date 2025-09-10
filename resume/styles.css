@@ -23,10 +23,17 @@ main {
 
 		background-color: var(--color-2-bg);
 		color: var(--color-2-fg);
-	}
 
-	& .big-item--header > * {
-		margin-block: auto;
+		& > * {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			padding-block: 1em;
+		}
+
+		& > * > * {
+			margin: 0;
+		}
 	}
 
 	& section#academics ul {
