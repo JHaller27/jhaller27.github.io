@@ -83,6 +83,20 @@ ul.sushi-tags {
 	}
 }
 
+ul.sushi-cards {
+	display: grid;
+	grid-auto-flow: column;
+	list-style-type: none;
+	padding: 0;
+	gap: 0.25em;
+
+	& li {
+		border: 2px solid var(--color-1-fg);
+		border-radius: 0.5em;
+		padding: 0.5em;
+	}
+}
+
 .outer {
 	width: 100%;
 	margin: 0;

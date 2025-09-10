@@ -28,4 +28,15 @@ main {
 	& .big-item--header > * {
 		margin-block: auto;
 	}
+
+	& section#academics ul {
+		& span {
+			display: block;
+		}
+
+		& span.school {
+			font-weight: bold;
+			font-size: var(--font-size-3);
+		}
+	}
 }
