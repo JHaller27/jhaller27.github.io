@@ -1,3 +1,13 @@
 main {
 	font-size: var(--font-size-3);
+
+	& .sushi-cards li {
+		padding: 0;
+		border: none;
+
+		& a {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
 }

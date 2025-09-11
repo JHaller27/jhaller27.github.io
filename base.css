@@ -67,12 +67,13 @@ a.link-button {
 	font-weight: bold;
 	text-decoration: none;
 
-	border: 2px solid transparent;
+	border: 3px solid transparent;
 }
 
 a.link-button:hover {
-	background-color: var(--color-bg-accent-secondary);
-	border: 2px solid var(--color-fg-accent-primary);
+	background-color: var(--color-fg-accent-primary);
+	color: var(--color-bg-accent-primary);
+	border-color: var(--color-bg-accent-primary);
 }
 
 ul.simple {
