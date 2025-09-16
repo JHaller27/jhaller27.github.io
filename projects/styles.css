@@ -1,11 +1,15 @@
 main {
 	& ul.sushi-cards {
-		grid-template-columns: 1fr;
+		& > li {
+			width: 100%;
+
+			& > h2 {
+				margin-block-end: 0.25em;
+			}
+		}
 	}
 
-	@media screen and (min-width: 992px) {
-		& ul.sushi-cards {
-			grid-template-columns: repeat(2, 1fr);
-		}
+	& ul.sushi-tags > li {
+		background-color: var(--color-1-bg);
 	}
 }

@@ -40,6 +40,10 @@ main {
 	}
 
 	& section#academics ul {
+		& > li {
+			flex: 1 0 0;
+		}
+
 		& span {
 			display: block;
 		}
