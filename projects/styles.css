@@ -1,0 +1,11 @@
+main {
+	& ul.sushi-cards {
+		grid-template-columns: 1fr;
+	}
+
+	@media screen and (min-width: 992px) {
+		& ul.sushi-cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

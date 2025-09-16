@@ -50,4 +50,8 @@ main {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 	}
+
+	& ul.sushi-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
